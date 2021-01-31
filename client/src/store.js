@@ -13,7 +13,7 @@ const sagaMiddleware = createSagaMiddleware()
 const initialState = {}
 
 const middlewares = [sagaMiddleware, routerMiddleware(history)]
-const devtools = window.EXTENSION 
+const devtools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;  //
 
 const composeEnhancer = 
   process.env.NODE_ENV === "production" ? compose : devtools || compose;
@@ -21,5 +21,8 @@ const composeEnhancer =
 const store = createStore(
   createRootReducer(history),
   initialState,
-  
+  composeEnhancer(applyMiddleware(...middlewares))
 )
+sagaMiddleware.run(rootSaga)
+
+export default store;
