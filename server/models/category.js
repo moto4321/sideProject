@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const CategorySchema = new mongoose.Schema({
   categoryName: {
     type: String,
-    default: "미분류"
+    default: "미분류",
   },
   posts: [
     {

@@ -290,3 +290,5 @@ export default function* postSaga() {
     fork(watchSearchResult),
   ]);
 }
+
+// 확인

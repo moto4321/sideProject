@@ -121,7 +121,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { LOGOUT_REQUEST, POSTS_WRITE_REQUEST } from "../redux/types";
 import LoginModal from "../components/auth/LoginModal";
 import RegisterModal from "../components/auth/RegisterModal";
-// import SearchInput from "./search/searchInput";
+import SearchInput from "./search/searchinput";
 
 const AppNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -212,7 +212,7 @@ const AppNavbar = () => {
       <Navbar color="dark" dark expand="lg" className="sticky-top">
         <Container>
           <Link to="/" className="text-white text-decoration-none">
-            Side Project's Blog(사플 블로그)
+            Side Project's Blog(@woooseogi)
           </Link>
           <NavbarToggler onClick={handleToggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -228,3 +228,5 @@ const AppNavbar = () => {
 };
 
 export default AppNavbar;
+
+// 확인

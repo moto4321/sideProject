@@ -14,7 +14,7 @@
 }
 
 #main-body {
-  min-width: 90vh;
+  min-height: 90vh;
 }
 
 .card-img-top {
@@ -22,3 +22,39 @@
   height: 20rem;
   object-fit: cover;
 }
+
+// CkEditor5 Setting
+.ck {
+  .ck-editor {
+    min-width: 100%;
+  }
+}
+
+.ck-editor__editable {
+  max-height: 80rem;
+  min-height: 20rem;
+  min-width: 100rem;
+}
+.ck-editor__editable_inline {
+  max-height: 80rem;
+  min-height: 20rem;
+  min-width: 100%;
+}
+
+// 글을 쓸 때 마다 화면이 흔들리는 것을 잡아줌
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+textarea {
+  resize: none;
+}
+
+.my_category {
+  &:last-child {
+    margin-bottom: 0.25rem;
+  }
+}
+
+//확인

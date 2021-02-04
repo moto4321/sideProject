@@ -23,7 +23,7 @@ const PostCardOne = ({ posts }) => {
                   to={`/post/${_id}`}
                   className="text-dark text-decoration-none"
                 >
-                  <Card className="mb-3"> 
+                  <Card className="mb-3">
                     <CardImg top alt="카드이미지" src={fileUrl} />
                     <CardBody>
                       <CardTitle className="text-truncate d-flex justify-content-between">
@@ -51,3 +51,5 @@ const PostCardOne = ({ posts }) => {
 };
 
 export default PostCardOne;
+
+// 확인

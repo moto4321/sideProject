@@ -1,52 +1,62 @@
-import { Alert, Button, Modal } from 'bootstrap';
-import React, { useEffect, useState, errorMsg } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Form, FormGroup, Input, Label, ModalBody, ModalHeader, NavLink } from 'reactstrap';
-import { CLEAR_ERROR_REQUEST, REGISTER_REQUEST } from '../../redux/types';
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { CLEAR_ERROR_REQUEST, REGISTER_REQUEST } from "../../redux/types";
+import {
+  NavLink,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Alert,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Button,
+} from "reactstrap";
 
 const RegisterModal = () => {
   const [modal, setModal] = useState(false);
   const [form, setValue] = useState({
     name: "",
     email: "",
-    password: ""
-  })
+    password: "",
+  });
   const [localMsg, setLocalMsg] = useState("");
   const { errorMsg } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
   const handleToggle = () => {
     dispatch({
-      type: CLEAR_ERROR_REQUEST
-    })
+      type: CLEAR_ERROR_REQUEST,
+    });
     setModal(!modal);
-  }
+  };
 
   useEffect(() => {
     try {
       setLocalMsg(errorMsg);
-    } catch(e) {
-      console.error(e)
+    } catch (e) {
+      console.error(e);
     }
-  }, [errorMsg])
+  }, [errorMsg]);
 
   const onChange = (e) => {
     setValue({
       ...form,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const {name, email, password} = form;
-    const newUser = {name, email, password}
+    const { name, email, password } = form;
+    const newUser = { name, email, password };
     console.log(newUser, "newUser");
     dispatch({
       type: REGISTER_REQUEST,
       payload: newUser,
-    })
-  }
+    });
+  };
   return (
     <div>
       <NavLink onClick={handleToggle} href="#">
@@ -59,7 +69,7 @@ const RegisterModal = () => {
           <Form onSubmit={onSubmit}>
             <FormGroup>
               <Label for="name">Name</Label>
-              <Input 
+              <Input
                 type="text"
                 name="name"
                 id="name"
@@ -67,7 +77,7 @@ const RegisterModal = () => {
                 onChange={onChange}
               />
               <Label for="email">Email</Label>
-              <Input 
+              <Input
                 type="email"
                 name="email"
                 id="email"
@@ -75,7 +85,7 @@ const RegisterModal = () => {
                 onChange={onChange}
               />
               <Label for="password">Password</Label>
-              <Input 
+              <Input
                 type="password"
                 name="password"
                 id="password"
@@ -90,8 +100,9 @@ const RegisterModal = () => {
         </ModalBody>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
-// presenter와 container 방식
 export default RegisterModal;
+
+//확인

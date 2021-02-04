@@ -1,11 +1,11 @@
-import mongoose from 'mongoose';
-import moment from 'moment';
+import mongoose from "mongoose";
+import moment from "moment";
 
 // Create Schema
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,  // not null
+    required: true,
   },
   email: {
     type: String,
@@ -23,25 +23,26 @@ const UserSchema = new mongoose.Schema({
   },
   register_date: {
     type: Date,
-    default: moment().format("YYYY-MM-DD hh:mm:ss")
+    default: moment().format("YYYY-MM-DD hh:mm:ss"),
   },
   comments: [
     {
       post_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "post",
+        ref: "posts",
       },
       comment_id: {
         type: mongoose.Schema.Types.ObjectId,
-      }
-    }
+        ref: "comments",
+      },
+    },
   ],
   posts: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "post",
-    }
-  ]
+      ref: "posts",
+    },
+  ],
 });
 
 const User = mongoose.model("user", UserSchema);
