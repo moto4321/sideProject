@@ -345,7 +345,7 @@ remove: [
 language: "ko",
 
 simpleUpload: {  // 이 부분이 가장 중요 (사진 드래그 업로드)
-  uploadUrl: `${process.env.REACT_APP_BASIC_SERVER_URL}/api/posts/image`,
+  uploadUrl: `${process.env.REACT_APP_BASIC_SERVER_URL}/api/post/image`,
 
  
 
