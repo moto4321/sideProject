@@ -20,7 +20,13 @@ const { MONGO_URI } = config;
 const prod = process.env.NODE_ENV === "production";
 
 app.use(hpp());
-app.use(helmet());
+//app.use(helmet());
+
+app.use(
+  helmet({
+    contentSecurityPolicy: false
+  })
+);
 
 app.use(cors({ origin: true, credentials: true }));
 app.use(morgan("dev"));
