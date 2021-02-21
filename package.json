@@ -17,7 +17,6 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "greenlock-express": "^4.0.3",
     "helmet": "^4.4.1",
     "hpp": "^0.2.3",
     "http-proxy": "^1.18.1",

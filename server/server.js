@@ -2,7 +2,7 @@ import app from "./app";
 import config from "./config/index";
 
 import path from "path";
-import greenlock from "greenlock-express";
+// import greenlock from "greenlock-express";
 
 const { PORT } = config;
 
