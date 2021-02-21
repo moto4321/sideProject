@@ -9,7 +9,7 @@ import {
   Col,
   Progress,
 } from "reactstrap";
-import { CKEditor } from "@ckeditor/ckeditor5-react";
+import CKEditor from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-editor-classic/src/classiceditor";
 import { editorConfiguration } from "../../components/editor/EditorConfig";
 import Myinit from "../../components/editor/UploadAdapter";
@@ -114,7 +114,7 @@ const PostEdit = () => {
               editor={ClassicEditor}
               config={editorConfiguration}
               data={postDetail.contents}
-              onReady={Myinit}
+              onInit={Myinit}
               onBlur={getDataFromCKEditor}
             />
             <Button
