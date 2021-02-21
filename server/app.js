@@ -31,6 +31,25 @@ app.use(
 app.use(cors({ origin: true, credentials: true }));
 app.use(morgan("dev"));
 
+/*if (prod) {
+  app.use(
+    cors({
+      origin: ["https://woooseogi.net", /\.woooseogi\.net$/],
+
+      credentials: true,
+    })
+  );
+} else {
+  app.use(morgan("dev"));
+  app.use(
+    cors({
+      origin: true,
+      credentials: true,
+    })
+  );
+} */
+
+
 app.use(express.json());
 
 mongoose
@@ -52,7 +71,7 @@ mongoose
     let to = `https://${req.hostname}${req.url}`;
     res.redirect(to);
   }
-});  */
+});*/
 
 app.use("/api/post", postRoutes);
 app.use("/api/user", userRoutes);
