@@ -52,7 +52,7 @@ import IndentBlock from "@ckeditor/ckeditor5-indent/src/indentblock";
 
 import SimpleUploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter";
 
- 
+// import {CKEditor} from '@ckeditor/ckeditor5-react';
 
 import "@ckeditor/ckeditor5-build-classic/build/translations/ko";
 

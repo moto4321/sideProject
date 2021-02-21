@@ -8,7 +8,7 @@ import {
 } from "../../redux/types";
 import { Button, Row, Col, Container } from "reactstrap";
 import { Link } from "react-router-dom";
-import CKEditor from "@ckeditor/ckeditor5-react";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
 import { GrowingSpinner } from "../../components/spinner/Spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
