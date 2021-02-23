@@ -41,7 +41,7 @@ export default function (state = initialState, action) {
     case POSTS_LOADING_REQUEST:
       return {
         ...state,
-        posts: [],
+        posts: state.posts.length === 0 ? [] : [...state.posts],
         loading: true,
       };
     case POSTS_LOADING_SUCCESS:
