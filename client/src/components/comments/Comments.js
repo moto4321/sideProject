@@ -62,12 +62,14 @@ const Comments = ({ id, userName, userId }) => {
               onChange={onChange}
               placeholder="Comment"
             />
+            
             <Button
               color="primary"
               block
               className="mt-2 offset-md-10 col-md-2 "
             >
               Submit
+              {/* OnClick 로그인이 안되어있으면 Alert로 "You are not authorized" */}
             </Button>
           </Row>
         </FormGroup>

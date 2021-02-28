@@ -154,6 +154,7 @@ const PostDetail = (req) => {
                         <Row className="p-2">
                           <div>{contents}</div>
                         </Row>
+                        {/* 여기에 delete, edit 버튼 생성 */}
                         <hr />
                       </div>
                     )
