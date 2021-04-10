@@ -105,7 +105,7 @@ const AppNavbar = () => {
       <Navbar color="dark" dark expand="lg" className="sticky-top">
         <Container>
           <Link to="/" className="text-white text-decoration-none">
-            Side Project's Blog(@woooseogi)
+            기억보단 기록을(@woooseogi)
           </Link>
           <NavbarToggler onClick={handleToggle} />
           <Collapse isOpen={isOpen} navbar>

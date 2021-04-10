@@ -149,12 +149,15 @@ const PostDetail = (req) => {
                               {" "}
                               {date.split(" ")[1]}
                             </span>
+                            {/* {" "}
+                            <Button size="sm" color="success">Edit</Button>
+                            {" "}
+                            <Button size="sm" color="danger">Delete</Button> */}
                           </div>
                         </Row>
                         <Row className="p-2">
                           <div>{contents}</div>
                         </Row>
-                        {/* 여기에 delete, edit 버튼 생성 */}
                         <hr />
                       </div>
                     )
