@@ -15,6 +15,8 @@ import { LOGOUT_REQUEST, POSTS_WRITE_REQUEST } from "../redux/types";
 import LoginModal from "../components/auth/LoginModal";
 import RegisterModal from "../components/auth/RegisterModal";
 import SearchInput from "./search/searchinput";
+import Github from "../assets/img/GitHub-Mark.png";
+import Instagram from "../assets/img/instagramm.png";
 
 const AppNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,7 +107,9 @@ const AppNavbar = () => {
       <Navbar color="dark" dark expand="lg" className="sticky-top">
         <Container>
           <Link to="/" className="text-white text-decoration-none">
-            Development Blog(@woooseogi)
+            Development Blog
+            <a href="https://github.com/moto4321"><img className="github" src={Github} /></a>
+            <a href="https://www.instagram.com/woooseogi"><img className="instagram" src={Instagram} /></a>
           </Link>
           <NavbarToggler onClick={handleToggle} />
           <Collapse isOpen={isOpen} navbar>
