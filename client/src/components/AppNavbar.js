@@ -7,9 +7,9 @@ import {
   Nav,
   NavItem,
   Form,
-  Button,
+  Button
 } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { LOGOUT_REQUEST, POSTS_WRITE_REQUEST } from "../redux/types";
 import LoginModal from "../components/auth/LoginModal";
@@ -102,15 +102,16 @@ const AppNavbar = () => {
     </Fragment>
   );
 
+
   return (
     <Fragment>
       <Navbar color="dark" dark expand="lg" className="sticky-top">
         <Container>
           <Link to="/" className="text-white text-decoration-none">
             Development Blog
-            <a href="https://github.com/moto4321"><img className="github" src={Github} /></a>
-            <a href="https://www.instagram.com/woooseogi"><img className="instagram" src={Instagram} /></a>
           </Link>
+          <a href="https://github.com/moto4321" target="_blank" rel="noopener noreferrer"><img className="github" src={Github} alt="" /></a>
+          <a href="https://www.instagram.com/woooseogi" target="_blank" rel="noopener noreferrer"><img className="instagram" src={Instagram} alt="" /></a>
           <NavbarToggler onClick={handleToggle} />
           <Collapse isOpen={isOpen} navbar>
             <SearchInput isOpen={isOpen} />
